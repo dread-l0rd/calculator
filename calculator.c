@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-enum options {add=1, sub, mul, div, mod, exp};
+enum options {add=1, sub, mul, div, mod, exponn};
 
 int main(){
 
@@ -50,7 +50,7 @@ int main(){
                 printf("%d %% %d is %d\n", (int)num1, (int)num2, int_result);
                 }
                 break;
-            case exp:
+            case exponn:
                 result = (float)pow((double)num1, (double)num2);
                 printf("%0.2f Pow of %0.2f is %0.2f\n", num2, num1, result);
                 break;
@@ -58,7 +58,7 @@ int main(){
                 break;
             }
 
-        } else {
+        } else if (choice > 6 && choice < 0) {
             printf("Wrong Choice select from the Menu\n");
         }
 
